@@ -1,0 +1,82 @@
+$background-color: #ffce00;
+$list-color: rgba(0, 0, 0, 0.1);
+$listItem-color: #f3f3f3;
+$button-color: #006400;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $background-color;
+    font-family: 'Roboto', Helvetica, sans-serif;
+}
+
+.app {
+    display: flex;
+    flex-flow: column;
+    width: 100vw;
+    height: 100vh;
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+    }
+
+    .lists {
+        display: flex;
+        flex: 1;
+        width: 100%;
+        overflow-x: scroll;
+
+        .list {
+            display: flex;
+            flex-flow: column;
+            flex: 1;
+
+            width: 100%;
+            min-width: 250px;
+            max-width: 350px;
+            height: 100%;
+            min-height: 150px;
+
+            background-color: $list-color;
+            margin: 0 15px;
+            padding: 8px;
+            transition: all 0.2s linear;
+        }
+
+        .list-item {
+            cursor: pointer;
+            background-color: $listItem-color;
+            border-radius: 8px;
+            padding: 15px 20px;
+            text-align: center;
+            margin: 4px 0px;
+        }
+
+        input {
+            background-color: $listItem-color;
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin: 4px 0px;
+        }
+
+        .add1,
+        .add2,
+        .add3,
+        .add4 {
+            font-weight: bold;
+            color: $listItem-color;
+            cursor: pointer;
+            background-color: $button-color;
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin: 4px 0px;
+        }
+    }
+}
